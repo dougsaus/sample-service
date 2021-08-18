@@ -1,0 +1,15 @@
+applications:
+  - name: sample-service
+    env:
+      JBP_CONFIG_JMX: '{enabled: true}'
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'
+      JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom'
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+      SPRING_PROFILES_ACTIVE: playground
+    instances: 2
+    memory: 1G
+    routes:
+      - route: pivot-rmukesh-playground-sample-service.apps.pcfone.io
+    services:
+      - scheduler
+      - autoscaler

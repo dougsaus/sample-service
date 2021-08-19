@@ -6,7 +6,7 @@ applications:
       JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom'
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
       SPRING_PROFILES_ACTIVE: playground
-    instances: 2
+    instances: 3
     memory: 1G
     routes:
       - route: pivot-rmukesh-playground-sample-service.apps.pcfone.io

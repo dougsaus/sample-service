@@ -23,6 +23,13 @@ public class DefaultWidgetService implements WidgetService {
 		return Map.of("1", Widget.builder().id("1").name("ima-widget").usage("useful thing").build(), "2",
 				Widget.builder().id("2").name("im-also-a-widget").usage("less-than-useful thing").build());
 
+		// return Map.of("1", Widget.builder().id("1").name("ima-widget").usage("useful
+		// thing").build(), "2",
+		// Widget.builder().id("2").name("im-also-a-widget").usage("less-than-useful
+		// thing").build(), "3",
+		// Widget.builder().id("3").name("the widgetest").usage("the most useful
+		// thing").build());
+
 	}
 
 }

@@ -1,5 +1,7 @@
 applications:
   - name: sample-service2
+    buildpacks:
+      - java_buildpack_offline
     env:
       JBP_CONFIG_JMX: '{enabled: true}'
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'
@@ -9,6 +11,6 @@ applications:
     instances: 2
     memory: 1G
     routes:
-      - route: pivot-rmukesh-playground-sample-service2.apps.pcfone.io
+      - route: pivot-rmukesh-playground-sample-service2.apps.internal
     services:
       - autoscaler

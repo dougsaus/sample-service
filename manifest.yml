@@ -1,5 +1,7 @@
 applications:
   - name: sample-service
+    buildpacks:
+      - java_buildpack_offline
     env:
       JBP_CONFIG_JMX: '{enabled: true}'
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'

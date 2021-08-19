@@ -23,7 +23,7 @@ This app contains a task that simply logs out all widgets and terminates.  Run a
 Note that the default `manifest.yml` is looking for service instances to already exist named `autoscaler` and `scheduler`.  Simply remove these services if you do not have them deployed in your environment, or deploy them with the following.  Note service names or plans could vary in your environment:
 #### Services
 1. `cf create-service scheduler-for-pcf standard scheduler`
-2. `cf create-service app-autoscaler standard scheduler`
+2. `cf create-service app-autoscaler standard autoscaler`
 #### To deploy this application to TAS, perform the following: 
 1. Build: `./gradlew build`
 2. Deploy: `cf push -p ./build/libs/sample-service-0.0.1-SNAPSHOT.jar`
